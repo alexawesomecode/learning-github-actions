@@ -12,8 +12,7 @@ jobs:
                                 node-version: "12.x"
                         - name: setting up eslint
                           run: | 
-                             npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import
-                             eslint-plugin-react 
+                             npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react [-f .eslintrc.yml ]
                              eslint-plugin-react-hooks || wget https://raw.githubusercontent.com/marcelmokos/eslint-config-with-prettier/master/.eslintrc.yml
                         - name: ESLint Report
                           run: npx eslint .
