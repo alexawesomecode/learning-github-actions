@@ -13,9 +13,9 @@ jobs:
                         - name: setting up eslint
                           run: | 
                             wget https://raw.githubusercontent.com/standard/eslint-config-standard/master/package.json || npm install eslint-config-standard jest --save-dev [ -f .eslintrc.json ] || wget https://raw.githubusercontent.com/standard/eslint-config-standard/master/eslintrc.json
-                        - name: ESLint Report
-                          run: npx eslint .
-                        - name: run jest
+                        - name: jest report
                           run: npx jest 
+                        - name: eslint report
+                          run: npx eslint . 
 
                          
